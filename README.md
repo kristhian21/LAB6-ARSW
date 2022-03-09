@@ -5,6 +5,11 @@
 
 ### Trabajo individual o en parejas. A quienes tuvieron malos resultados en el parcial anterior se les recomienda hacerlo individualmente.
 
+### Integrantes
+
+* Kristhian David Segura
+* Eduardo Ospina
+
 ![](img/mock.png)
 
 * Al oprimir 'Get blueprints', consulta los planos del usuario dado en el formulario. Por ahora, si la consulta genera un error, sencillamente no se mostrará nada.
