@@ -15,9 +15,20 @@ var apiclient = (function() {
                     bluePrintName.innerHTML = element.name;
                     numberOfPoints.innerHTML = element.points.length;
                     cont += element.points.length;
-                    button.innerHTML = "<Button class=\"btn btn-success\">Open</Button>";
+                    button.innerHTML = "<button class=\"btn btn-success\" onclick=\"app.draw('" + element.name + "')\">Open</Button>";
                 });
                 document.getElementById("totalPoints").innerHTML = "Total points: " + cont;
+            });
+        },
+
+        getBlueprintsByNameAndAuthor: function (authorName, bpName){
+            jQuery.ajax({
+                type:'GET',
+                url: "http://localhost:8080/blueprints/"+authorName+"/"+bpName,
+                success:  (result) =>{
+                    callback(null,[result]);
+                },
+                async: true
             });
         }
     }
